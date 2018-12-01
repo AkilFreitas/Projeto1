@@ -1,0 +1,55 @@
+<div class="content card"></div>
+<div *ngIf="carregando" class="progress">
+    <div class="indeterminate"></div>
+  </div>
+
+  <h6 *ngIf="!Jogador && carregando">Não há Jogadores cadastrados</h6>
+
+  <div *ngIf="!carregando">
+    <h6>Jogadores cadastrados</h6>
+
+    <table> 
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Posição</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let jogador of jogadores">
+          <td>
+            <span>{{jogador.nome}}</span>
+            <!--*<input ngIf="Jogador.editando" type="text" [(ngModel)]="jogador.nome" name="nome-{{jogador.uid}}">
+          </td>
+        -->
+        
+          <td>
+              <span >{{jogador.posicao}}</span>
+              <!--
+                *ngIf="!Jogador.editando"
+                <input *ngIf="Jogador.editando" type="text" [(ngModel)]="jogador.posicao" name="posicao-{{jogador.uid}}">
+              -->
+            </td>
+        <!--  
+            <td *ngIf="!Jogador.editando" class="remove-parent">
+            <a class="edit-parent" (click)="editar(Jogador)" href="javascript:void(0);">
+              <i class="material-icons">edit</i>
+            </a>
+            <a (click)="remover(Jogador.uid)" href="javascript:void(0);">
+              <i class="material-icons">delete</i>
+            </a>
+          </td>
+          <td *ngIf="Jogador.editando" class="remove-parent">
+              <a class="confirm-parent" (click)="confirmEdit(Jogador)" href="javascript:void(0);">
+                <i class="material-icons">check</i>
+              </a>
+              <a (click)="cancelEdit(Jogador)" href="javascript:void(0);">
+                <i class="material-icons">close</i>
+              </a>
+            </td>
+            -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
