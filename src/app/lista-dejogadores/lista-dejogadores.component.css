@@ -1,5 +1,5 @@
 h4 {
-    color: #326CA4;
+    color: #C42C27;
 }
 
 .content {
@@ -10,7 +10,7 @@ h4 {
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   box-shadow: 0 4px 8px 0 #1E1916;
     transition: 0.3s;
 }
 
@@ -23,15 +23,15 @@ input {
 
 button {
     background: white;
-    border: 1px solid #326CA4;
+    border: 1px solid #C42C27;
     padding: 15px;
-    color: #326CA4;
+    color: #C42C27;
     padding-left: 25px;
     padding-right: 25px;
 }
 
 button:hover {
-    background: #326CA4;
+    background: #C42C27;
     color: white;
     cursor: pointer;
 }
@@ -55,7 +55,7 @@ tr:nth-child(even) {
 }
 
 th {
-    background: #326CA4;
+    background: #C42C27;
     color: white;
     border: 2px solid;
 }
@@ -88,7 +88,7 @@ img {
 
 .edit-parent {
     margin-right: 8px;
-    background-color: #326CA4;
+    background-color: #C42C27;
 }
 
 table input {
@@ -99,5 +99,5 @@ table input {
 
 .confirm-parent {
     margin-right: 8px;
-    background: #326CA4;
+    background: #C42C27;
 }

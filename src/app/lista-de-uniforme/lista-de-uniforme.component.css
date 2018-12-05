@@ -1,5 +1,5 @@
 h4 {
-    color: #C42C27;
+    color: #326CA4;
 }
 
 .content {
@@ -42,7 +42,8 @@ button:hover {
 }
 
 table {
-    width: 100%;
+    width: 60%;
+    margin-left: 25%;
 }
 
 td, th {

@@ -13,11 +13,18 @@ import { JogadorComponent } from './jogador/jogador.component';
 import { ListaDejogadoresComponent } from './lista-dejogadores/lista-dejogadores.component';
 import { DBService } from './servicos/db.service';
 
+import { ListaDeUniformeComponent } from './lista-de-uniforme/lista-de-uniforme.component';
+import { UniformeComponent } from './uniforme/uniforme.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     JogadorComponent,
-    ListaDejogadoresComponent
+    ListaDejogadoresComponent,
+    
+    ListaDeUniformeComponent,
+    
+    UniformeComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,9 @@ import { DBService } from './servicos/db.service';
     AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot([
       { path: 'jogador', component: JogadorComponent },
-      { path: 'listaDejogadores', component: ListaDejogadoresComponent }
+      { path: 'listaDejogadores', component: ListaDejogadoresComponent },
+      { path: 'uniforme', component: UniformeComponent },
+      { path: 'listaDeUniforme', component: ListaDeUniformeComponent }
     ])
   ],
   providers: [AngularFireDatabase,DBService],

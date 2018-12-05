@@ -1,0 +1,51 @@
+<div class="content card"></div>
+<div *ngIf="carregando" class="progress">
+    <div class="indeterminate"></div>
+  </div>
+
+  <h6 *ngIf="!Uniforme && carregando">Não há Uniformes cadastrados</h6>
+
+  <div *ngIf="!carregando">
+    <h6 align="center">Uniformes cadastrados</h6>
+
+    <table> 
+      <thead>
+        <tr>
+          <th>Padrao</th>
+          <th>Qtd</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let uniforme of uniformes">
+          <td>
+            <span>{{uniforme.padrao}}</span>
+            <td>
+                <span *ngIf="!uniforme.editando">{{uniforme.padrao}}</span>
+                <input *ngIf="uniforme.editando" type="text" [(ngModel)]="uniforme.padrao" name="padrao-{{uniforme.uid}}">
+            </td>
+            <td>
+                <span *ngIf="!uniforme.editando">{{uniforme.qtd}}</span>
+                <input *ngIf="uniforme.editando" type="text" [(ngModel)]="uniforme.qtd" name="qtd-{{uniforme.uid}}">
+           </td>
+
+            <td *ngIf="!uniforme.editando" class="remove-parent">
+            <a class="edit-parent" (click)="editar(uniforme)" href="javascript:void(0);">
+              <i class="material-icons">edit</i>
+            </a>
+            <a (click)="remover(uniforme.uid)" href="javascript:void(0);">
+              <i class="material-icons">delete</i>
+            </a>
+          </td>
+          <td *ngIf="uniforme.editando" class="remove-parent">
+              <a class="confirm-parent" (click)="confirmEdit(uniforme)" href="javascript:void(0);">
+                <i class="material-icons">check</i>
+              </a>
+              <a (click)="cancelEdit(uniforme)" href="javascript:void(0);">
+                <i class="material-icons">close</i>
+              </a>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

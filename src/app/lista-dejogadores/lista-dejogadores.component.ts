@@ -5,7 +5,9 @@ import { DBService } from '../servicos/db.service';
 @Component({
   selector: 'app-lista-dejogadores',
   templateUrl: './lista-dejogadores.component.html',
-  styleUrls: ['./lista-dejogadores.component.css']
+  styleUrls: ['./lista-dejogadores.component.css'],
+  providers: [DBService]
+
 })
 export class ListaDejogadoresComponent implements OnInit {
   jogadores: Jogador[];

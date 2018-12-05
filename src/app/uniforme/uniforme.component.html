@@ -1,0 +1,9 @@
+<div class="content card">
+    <h4>Cadastro de Uniforme</h4>
+  
+    <input type="text" id="padrao" name="padrao" [(ngModel)]="novoUniforme.padrao" placeholder="Digite o seu padrao">
+    <input (keyup.enter)="cadastrar()" type="text" id="qtd" name="qtd" [(ngModel)]="novoUniforme.qtd" placeholder="Digite a quantidade">
+  
+    <div class="button-container">
+      <button [disabled]="!novoUniforme.padrao || !novoUniforme.qtd"  (click)="cadastrar()">CADASTRAR</button>
+    </div>
