@@ -2,8 +2,10 @@
     <h4>Cadastro de Jogadores</h4>
   
     <input type="text" id="nome" name="nome" [(ngModel)]="novoJogador.nome" placeholder="Digite o seu nome">
-    <input (keyup.enter)="cadastrar()" type="text" id="posicao" name="posicao" [(ngModel)]="novoJogador.posicao" placeholder="Digite o seu posição">
+    <input type="text" id="time" name="time" [(ngModel)]="novoJogador.time" placeholder="Digite qual é o time">
+    <input type="text" id="idade" name="idade" [(ngModel)]="novoJogador.idade" placeholder="Digite a idade">
+    <input (keyup.enter)="cadastrar()" type="text" id="posicao" name="posicao" [(ngModel)]="novoJogador.posicao" placeholder="Digite a sua posição">
   
     <div class="button-container">
-      <button [disabled]="!novoJogador.nome || !novoJogador.posicao"  (click)="cadastrar()">CADASTRAR</button>
+      <button [disabled]="!novoJogador.nome || !novoJogador.posicao || !novoJogador.time || !novoJogador.idade"  (click)="cadastrar()">CADASTRAR</button>
     </div>

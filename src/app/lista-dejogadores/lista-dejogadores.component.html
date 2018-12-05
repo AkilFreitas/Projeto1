@@ -13,6 +13,8 @@
         <tr>
           <th>Nome</th>
           <th>Posição</th>
+          <th>Time</th>
+          <th>Idade</th>
           <th></th>
         </tr>
       </thead>
@@ -26,7 +28,14 @@
           <span *ngIf="!jogador.editando">{{jogador.posicao}}</span>
               <input *ngIf="jogador.editando" type="text" [(ngModel)]="jogador.posicao" name="posicao-{{jogador.uid}}">
          </td>
-       
+         <td>
+          <span *ngIf="!jogador.editando">{{jogador.time}}</span>
+          <input *ngIf="jogador.editando" type="text" [(ngModel)]="jogador.time" name="time-{{jogador.uid}}">
+        </td>
+        <td>
+        <span *ngIf="!jogador.editando">{{jogador.idade}}</span>
+            <input *ngIf="jogador.editando" type="text" [(ngModel)]="jogador.idade" name="idade-{{jogador.uid}}">
+       </td>
             <td *ngIf="!jogador.editando" class="remove-parent">
             <a class="edit-parent" (click)="editar(jogador)" href="javascript:void(0);">
               <i class="material-icons">edit</i>

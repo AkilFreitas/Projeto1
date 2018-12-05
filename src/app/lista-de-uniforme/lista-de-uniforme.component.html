@@ -27,7 +27,7 @@
             <span *ngIf="!uniforme.editando">{{uniforme.qtd}}</span>
                 <input *ngIf="uniforme.editando" type="text" [(ngModel)]="uniforme.qtd" name="qtd-{{uniforme.uid}}">
            </td>
-
+          
             <td *ngIf="!uniforme.editando" class="remove-parent">
             <a class="edit-parent" (click)="editar(uniforme)" href="javascript:void(0);">
               <i class="material-icons">edit</i>

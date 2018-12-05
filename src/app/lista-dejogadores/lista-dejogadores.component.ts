@@ -29,7 +29,6 @@ export class ListaDejogadoresComponent implements OnInit {
         this.carregando = false;
       });
   }
-
   remover(uid: string) {
     this.database.remover('Jogador', uid)
       .then(() => {
@@ -48,7 +47,7 @@ export class ListaDejogadoresComponent implements OnInit {
   }
 
   confirmEdit(Jogador) {
-    this.database.atualizar('Jogador', Jogador.uid, { nome: Jogador.nome, posicao: Jogador.posicao })
+    this.database.atualizar('Jogador', Jogador.uid, { nome: Jogador.nome, posicao: Jogador.posicao, time: Jogador.time, idade: Jogador.idade})
       .then(() => {
         alert('jogador atualizado com sucesso');
         this.carregarJogadores();
