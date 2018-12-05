@@ -18,14 +18,13 @@
       </thead>
       <tbody>
         <tr *ngFor="let uniforme of uniformes">
-          <td>
-            <span>{{uniforme.padrao}}</span>
+         
             <td>
-                <span *ngIf="!uniforme.editando">{{uniforme.padrao}}</span>
-                <input *ngIf="uniforme.editando" type="text" [(ngModel)]="uniforme.padrao" name="padrao-{{uniforme.uid}}">
+              <span *ngIf="!uniforme.editando">{{uniforme.padrao}}</span>
+              <input *ngIf="uniforme.editando" type="text" [(ngModel)]="uniforme.padrao" name="padrao-{{uniforme.uid}}">
             </td>
             <td>
-                <span *ngIf="!uniforme.editando">{{uniforme.qtd}}</span>
+            <span *ngIf="!uniforme.editando">{{uniforme.qtd}}</span>
                 <input *ngIf="uniforme.editando" type="text" [(ngModel)]="uniforme.qtd" name="qtd-{{uniforme.uid}}">
            </td>
 

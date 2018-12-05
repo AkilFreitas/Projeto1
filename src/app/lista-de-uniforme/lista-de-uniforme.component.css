@@ -1,10 +1,10 @@
 h4 {
-    color: #326CA4;
+    color: #1E1916;
 }
 
 .content {
     width: 50%;
-    background: white;
+    background: #1E1916;
     margin-left: 25%;
     padding: 20px;
 }
@@ -22,7 +22,7 @@ input {
 }
 
 button {
-    background: white;
+    background: #1E1916;
     border: 1px solid #C42C27;
     padding: 15px;
     color: #C42C27;
@@ -32,7 +32,7 @@ button {
 
 button:hover {
     background: #C42C27;
-    color: white;
+    color: #1E1916;
     cursor: pointer;
 }
 
@@ -56,7 +56,7 @@ tr:nth-child(even) {
 
 th {
     background: #C42C27;
-    color: white;
+    color: #1E1916;
     border: 2px solid;
 }
 
@@ -83,7 +83,7 @@ img {
 
 .remove-parent i {
     text-align: center;
-    color: white;
+    color: #1E1916;
 }
 
 .edit-parent {
@@ -94,7 +94,7 @@ img {
 table input {
     border: 1px solid;
     padding-left: 8px;
-    background: white;
+    background: #1E1916;
 }
 
 .confirm-parent {
