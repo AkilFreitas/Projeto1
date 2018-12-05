@@ -83,7 +83,7 @@ img {
 
 .remove-parent i {
     text-align: center;
-    color: #1E1916;
+    color: white;
 }
 
 .edit-parent {
@@ -94,7 +94,7 @@ img {
 table input {
     border: 1px solid;
     padding-left: 8px;
-    background: #1E1916;
+    background: white;
 }
 
 .confirm-parent {

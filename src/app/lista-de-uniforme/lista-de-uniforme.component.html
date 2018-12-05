@@ -1,4 +1,3 @@
-<div class="content card"></div>
 <div *ngIf="carregando" class="progress">
     <div class="indeterminate"></div>
   </div>
@@ -13,6 +12,8 @@
         <tr>
           <th>Padrao</th>
           <th>Qtd</th>
+          <th>Numero Da Camisa</th>
+
           <th></th>
         </tr>
       </thead>
@@ -27,7 +28,11 @@
             <span *ngIf="!uniforme.editando">{{uniforme.qtd}}</span>
                 <input *ngIf="uniforme.editando" type="text" [(ngModel)]="uniforme.qtd" name="qtd-{{uniforme.uid}}">
            </td>
-          
+           <td>
+            <span *ngIf="!uniforme.editando">{{uniforme.numero}}</span>
+            <input *ngIf="uniforme.editando" type="text" [(ngModel)]="uniforme.numero" name="numero-{{uniforme.uid}}">
+          </td>
+
             <td *ngIf="!uniforme.editando" class="remove-parent">
             <a class="edit-parent" (click)="editar(uniforme)" href="javascript:void(0);">
               <i class="material-icons">edit</i>

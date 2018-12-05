@@ -48,7 +48,7 @@ export class ListaDeUniformeComponent implements OnInit {
   }
 
   confirmEdit(Uniforme) {
-    this.database.atualizar('Uniforme', Uniforme.uid, { padrao: Uniforme.padrao, qtd: Uniforme.qtd})
+    this.database.atualizar('Uniforme', Uniforme.uid, { padrao: Uniforme.padrao, qtd: Uniforme.qtd, numero: Uniforme.numero})
       .then(() => {
         alert('uniforme atualizado com sucesso');
         this.carregarUniformes();
